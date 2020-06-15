@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "charts-button": "parcel src/charts-button/index.html"
+        "charts-button": "parcel src/charts-button/index.html",
+        "resize-observer": "parcel src/resize-observer/index.html"
     },
     "repository": {
         "type": "git",

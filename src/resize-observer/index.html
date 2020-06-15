@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resize Observer</title>
+        <link rel="stylesheet" href="../../node_modules/modern-normalize/modern-normalize.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class="info">
+            Try resizing your window, if it doesn't work try check
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver">MDN</a> for
+            ResizeObserver compatibility with your browser. You might need to polyfill ResizeObserver especially for
+            Safari, since apple only support it recently on Safari 13.1 on macOS and 13.4 on iOS.
+        </div>
+        <div class="lightweight-charts" id="main-chart"></div>
+        <script src="./index.ts"></script>
+    </body>
+</html>
