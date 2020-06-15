@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Charts with Button</title>
+        <link rel="stylesheet" href="../../node_modules/modern-normalize/modern-normalize.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class="button-group">
+            <span>Size</span>
+            <button id="size-1">400x300</button>
+            <button id="size-2">800x600</button>
+            <button id="size-3">1024x768</button>
+        </div>
+        <div class="button-group">
+            <span>Precision</span>
+            <button id="precision-1">2</button>
+            <button id="precision-2">4</button>
+            <button id="precision-3">6</button>
+        </div>
+        <div class="lightweight-charts" id="main-chart"></div>
+        <script src="./index.ts"></script>
+    </body>
+</html>
