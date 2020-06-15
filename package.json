@@ -1,0 +1,27 @@
+{
+    "name": "lightweight-charts-example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "charts-button": "parcel src/charts-button/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SuperPenguin/lightweight-charts-example.git"
+    },
+    "author": "Andree Yosua",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SuperPenguin/lightweight-charts-example/issues"
+    },
+    "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "typescript": "^3.9.5"
+    },
+    "dependencies": {
+        "lightweight-charts": "^3.0.1",
+        "modern-normalize": "^0.6.0"
+    }
+}
