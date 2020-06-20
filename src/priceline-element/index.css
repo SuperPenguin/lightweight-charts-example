@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.priceline-input {
+    padding: 5px 10px;
+}
+.lightweight-charts {
+    border: 1px solid black;
+}
+.priceline-buy {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    border: 1px solid red;
+    background: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: red;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    right: 10px;
+}
+.buy-button.hidden {
+    display: none;
+}
