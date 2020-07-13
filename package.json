@@ -20,10 +20,10 @@
     "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
     "devDependencies": {
         "parcel-bundler": "^1.12.4",
-        "typescript": "^3.9.5"
+        "typescript": "^3.9.6"
     },
     "dependencies": {
-        "lightweight-charts": "^3.0.1",
+        "lightweight-charts": "^3.1.2",
         "modern-normalize": "^0.6.0"
     }
 }
