@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "charts-button": "parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
+        "intraday-chart": "parcel src/intraday-chart/index.html --out-dir ./dist/charts-button --open",
         "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
         "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open"
     },
@@ -23,7 +24,7 @@
         "typescript": "^3.9.6"
     },
     "dependencies": {
-        "lightweight-charts": "^3.1.2",
+        "lightweight-charts": "^3.1.3",
         "modern-normalize": "^0.6.0"
     }
 }

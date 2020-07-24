@@ -1,4 +1,4 @@
-import { createChart, LineData, UTCTimestamp, PriceLineSource } from "lightweight-charts";
+import { createChart, LineData, PriceLineSource, UTCTimestamp } from "lightweight-charts";
 
 const chartContainer = document.getElementById("main-chart") as HTMLElement;
 const chart = createChart(chartContainer, {
