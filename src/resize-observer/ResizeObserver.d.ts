@@ -182,13 +182,15 @@ interface ResizeObserverEntry {
      * An object containing the new border box size of the observed element when
      * the callback is run.
      */
-    readonly borderBoxSize: ResizeObserverEntryBoxSize;
+    readonly borderBoxSize: ResizeObserverEntryBoxSize | ResizeObserverEntryBoxSize[];
 
     /**
      * An object containing the new content box size of the observed element when
      * the callback is run.
      */
-    readonly contentBoxSize: ResizeObserverEntryBoxSize;
+    readonly contentBoxSize: ResizeObserverEntryBoxSize | ResizeObserverEntryBoxSize[];
+
+    readonly devicePixelContentBoxSize: ResizeObserverEntryBoxSize[];
 
     /**
      * A [DOMRectReadOnly](https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly)

@@ -47,7 +47,11 @@ const observerCallback = (entries: ResizeObserverEntry[], observer: ResizeObserv
     for (const entry of entries) {
         if (entry.target == chartContainer) {
             if (entry.contentBoxSize) {
-                chart.resize(entry.contentBoxSize.inlineSize, entry.contentBoxSize.blockSize);
+                if (Array.isArray(entry.contentBoxSize)) {
+                    chart.resize(entry.contentBoxSize[0].inlineSize, entry.contentBoxSize[0].blockSize);
+                } else {
+                    chart.resize(entry.contentBoxSize.inlineSize, entry.contentBoxSize.blockSize);
+                }
             } else {
                 chart.resize(entry.contentRect.width, entry.contentRect.height);
             }
