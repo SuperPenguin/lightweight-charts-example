@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "sandbox": "parcel src/sandbox/index.html --out-dir ./dist/charts-button --open",
         "charts-button": "parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
         "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
         "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open"
