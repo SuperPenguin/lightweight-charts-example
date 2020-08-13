@@ -1,6 +1,10 @@
 import { createChart, LineData, PriceLineSource, UTCTimestamp } from "lightweight-charts";
 
-const chartContainer = document.getElementById("main-chart") as HTMLDivElement;
+interface HTMLResizeableElement extends HTMLElement {
+    handleResize?: (entry: ResizeObserverEntry) => void;
+}
+
+const chartContainer = document.getElementById("main-chart") as HTMLResizeableElement;
 const chart = createChart(chartContainer, {
     width: chartContainer.clientWidth,
     height: chartContainer.clientHeight,
@@ -9,6 +13,18 @@ const chart = createChart(chartContainer, {
             "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
     },
 });
+
+chartContainer.handleResize = (entry) => {
+    if (entry.contentBoxSize) {
+        if (Array.isArray(entry.contentBoxSize)) {
+            chart.resize(entry.contentBoxSize[0].inlineSize, entry.contentBoxSize[0].blockSize);
+        } else {
+            chart.resize(entry.contentBoxSize.inlineSize, entry.contentBoxSize.blockSize);
+        }
+    } else {
+        chart.resize(entry.contentRect.width, entry.contentRect.height);
+    }
+};
 
 const series = chart.addLineSeries({
     priceLineSource: PriceLineSource.LastVisible,
@@ -43,21 +59,13 @@ for (let i = 0; i < 360; i++) {
 
 series.setData(data);
 
-const observerCallback = (entries: ResizeObserverEntry[], observer: ResizeObserver) => {
+const observer = new ResizeObserver((entries) => {
     for (const entry of entries) {
-        if (entry.target == chartContainer) {
-            if (entry.contentBoxSize) {
-                if (Array.isArray(entry.contentBoxSize)) {
-                    chart.resize(entry.contentBoxSize[0].inlineSize, entry.contentBoxSize[0].blockSize);
-                } else {
-                    chart.resize(entry.contentBoxSize.inlineSize, entry.contentBoxSize.blockSize);
-                }
-            } else {
-                chart.resize(entry.contentRect.width, entry.contentRect.height);
-            }
+        let element = entry.target as HTMLResizeableElement;
+
+        if (element.handleResize) {
+            element.handleResize(entry);
         }
     }
-};
-
-const observer = new ResizeObserver(observerCallback);
+});
 observer.observe(chartContainer);
