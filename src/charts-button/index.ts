@@ -6,16 +6,16 @@ const chart = createChart(chartContainer, {
     height: 600,
     layout: {
         fontFamily:
-            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    },
+            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    }
 });
 
 const series = chart.addLineSeries({
     priceLineSource: PriceLineSource.LastVisible,
     priceFormat: {
         precision: 2,
-        minMove: 0.01,
-    },
+        minMove: 0.01
+    }
 });
 const data: LineData[] = [];
 
@@ -39,7 +39,7 @@ let dateToUnix = (date: Date) => {
 for (let i = 0; i < 360; i++) {
     data.push({
         time: dateToUnix(date) as UTCTimestamp,
-        value: Math.sin((i * 6 * Math.PI) / 180) * 10,
+        value: Math.sin((i * 6 * Math.PI) / 180) * 10
     });
 
     date.setDate(date.getDate() + 1);
@@ -78,8 +78,8 @@ precision1.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 2,
-            minMove: 0.01,
-        },
+            minMove: 0.01
+        }
     });
 });
 
@@ -88,8 +88,8 @@ precision2.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 4,
-            minMove: 0.0001,
-        },
+            minMove: 0.0001
+        }
     });
 });
 
@@ -98,7 +98,7 @@ precision3.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 6,
-            minMove: 0.000001,
-        },
+            minMove: 0.000001
+        }
     });
 });

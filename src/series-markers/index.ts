@@ -3,11 +3,11 @@ import { createChart, LineData, SeriesMarker, UTCTimestamp } from "lightweight-c
 const chartRoot = document.getElementById("main-chart") as HTMLElement;
 const chart = createChart(chartRoot, {
     width: 800,
-    height: 600,
+    height: 600
 });
 
 const lineSeries = chart.addLineSeries({
-    lineWidth: 2,
+    lineWidth: 2
 });
 const data: LineData[] = [];
 const marker: SeriesMarker<UTCTimestamp>[] = [];
@@ -38,13 +38,13 @@ for (let i = 0; i < 360; i++) {
             position: value > 0 ? "aboveBar" : "belowBar",
             shape: value > 0 ? "arrowUp" : "arrowDown",
             color: "red",
-            text: value > 0 ? "UP" : " DOWN",
+            text: value > 0 ? "UP" : " DOWN"
         });
     }
 
     data.push({
         time: dateToUnix(date) as UTCTimestamp,
-        value: value,
+        value: value
     });
 
     date.setDate(date.getDate() + 1);

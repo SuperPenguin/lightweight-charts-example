@@ -3,11 +3,11 @@ import { createChart, LineData, LineStyle, UTCTimestamp } from "lightweight-char
 const chartContainer = document.getElementById("main-chart") as HTMLDivElement;
 const chart = createChart(chartContainer, {
     width: 800,
-    height: 600,
+    height: 600
 });
 const series = chart.addLineSeries({
     color: "blue",
-    priceLineVisible: false,
+    priceLineVisible: false
 });
 const chartViewport = chartContainer.querySelector("table > tr > td:nth-child(2) > div") as HTMLDivElement;
 const priceLineInput = document.getElementById("priceline-value") as HTMLInputElement;
@@ -34,7 +34,7 @@ let dateToUnix = (date: Date) => {
 for (let i = 0; i < 360; i++) {
     data.push({
         time: dateToUnix(date) as UTCTimestamp,
-        value: Math.sin((i * 6 * Math.PI) / 180) * 10,
+        value: Math.sin((i * 6 * Math.PI) / 180) * 10
     });
 
     date.setDate(date.getDate() + 1);
@@ -48,7 +48,7 @@ const priceLine = series.createPriceLine({
     color: "red",
     lineStyle: LineStyle.Solid,
     lineWidth: 1,
-    price: prevPriceLineValue,
+    price: prevPriceLineValue
 });
 
 const buyElem = document.createElement("button");
@@ -59,7 +59,7 @@ const movePriceLine = (price: number) => {
 
     if (price != prevPriceLineValue) {
         priceLine.applyOptions({
-            price: price,
+            price: price
         });
 
         prevPriceLineValue = price;

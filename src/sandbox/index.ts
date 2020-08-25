@@ -6,8 +6,8 @@ const chart = createChart(chartContainer, {
     height: 600,
     layout: {
         fontFamily:
-            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    },
+            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    }
 });
 
 chart.timeScale().getVisibleRange();
@@ -16,8 +16,8 @@ const series = chart.addLineSeries({
     priceLineSource: PriceLineSource.LastVisible,
     priceFormat: {
         precision: 2,
-        minMove: 0.01,
-    },
+        minMove: 0.01
+    }
 });
 const data: LineData | WhitespaceData[] = [];
 
@@ -43,12 +43,12 @@ for (let i = 0; i < 360; i++) {
 
     if (Math.abs(value) > 9.9) {
         data.push({
-            time: dateToUnix(date) as UTCTimestamp,
+            time: dateToUnix(date) as UTCTimestamp
         } as WhitespaceData);
     } else {
         data.push({
             time: dateToUnix(date) as UTCTimestamp,
-            value: value,
+            value: value
         } as LineData);
     }
 
@@ -88,8 +88,8 @@ precision1.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 2,
-            minMove: 0.01,
-        },
+            minMove: 0.01
+        }
     });
 });
 
@@ -98,8 +98,8 @@ precision2.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 4,
-            minMove: 0.0001,
-        },
+            minMove: 0.0001
+        }
     });
 });
 
@@ -108,7 +108,7 @@ precision3.addEventListener("click", (ev) => {
     series.applyOptions({
         priceFormat: {
             precision: 6,
-            minMove: 0.000001,
-        },
+            minMove: 0.000001
+        }
     });
 });

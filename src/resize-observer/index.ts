@@ -10,8 +10,8 @@ const chart = createChart(chartContainer, {
     height: chartContainer.clientHeight,
     layout: {
         fontFamily:
-            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    },
+            "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+    }
 });
 
 chartContainer.handleResize = (entry) => {
@@ -27,7 +27,7 @@ chartContainer.handleResize = (entry) => {
 };
 
 const series = chart.addLineSeries({
-    priceLineSource: PriceLineSource.LastVisible,
+    priceLineSource: PriceLineSource.LastVisible
 });
 const data: LineData[] = [];
 
@@ -51,7 +51,7 @@ let dateToUnix = (date: Date) => {
 for (let i = 0; i < 360; i++) {
     data.push({
         time: dateToUnix(date) as UTCTimestamp,
-        value: Math.sin((i * 6 * Math.PI) / 180) * 10,
+        value: Math.sin((i * 6 * Math.PI) / 180) * 10
     });
 
     date.setDate(date.getDate() + 1);
