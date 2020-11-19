@@ -4,12 +4,12 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "sandbox": "parcel src/sandbox/index.html --out-dir ./dist/charts-button --open",
-        "charts-button": "parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
-        "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
-        "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open",
-        "series-markers": "parcel src/series-markers/index.html --out-dir ./dist/resize-observer --open",
-        "tickmark-format": "parcel src/tickmark-format/index.html --out-dir ./dist/tickmark-format --open"
+        "sandbox": "cross-env NODE_ENV=development && parcel src/sandbox/index.html --out-dir ./dist/charts-button --open",
+        "charts-button": "cross-env NODE_ENV=development && parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
+        "priceline-element": "cross-env NODE_ENV=development && parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
+        "resize-observer": "cross-env NODE_ENV=development && parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open",
+        "series-markers": "cross-env NODE_ENV=development && parcel src/series-markers/index.html --out-dir ./dist/resize-observer --open",
+        "tickmark-format": "cross-env NODE_ENV=developmentls && parcel src/tickmark-format/index.html --out-dir ./dist/tickmark-format --open"
     },
     "repository": {
         "type": "git",
@@ -22,11 +22,13 @@
     },
     "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
     "devDependencies": {
+        "@types/node": "^14.14.7",
+        "cross-env": "^7.0.2",
         "parcel-bundler": "^1.12.4",
         "typescript": "^4.0.5"
     },
     "dependencies": {
-        "lightweight-charts": "^3.1.5",
+        "lightweight-charts": "^3.2.0",
         "modern-normalize": "^1.0.0"
     }
 }
