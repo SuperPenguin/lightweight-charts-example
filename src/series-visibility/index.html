@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandbox</title>
+    <link rel="stylesheet" href="../../node_modules/modern-normalize/modern-normalize.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="control">
+      <input type="checkbox" name="area-visible" id="area-visible" checked />
+      <label for="area-visible">Area</label>
+      <input type="checkbox" name="candlestick-visible" id="candlestick-visible" checked />
+      <label for="candlestick-visible">Candlestick</label>
+      <input type="checkbox" name="volume-visible" id="volume-visible" checked />
+      <label for="volume-visible">Volume</label>
+    </div>
+    <div class="lightweight-charts" id="main-chart"></div>
+    <script src="./index.ts"></script>
+  </body>
+</html>
