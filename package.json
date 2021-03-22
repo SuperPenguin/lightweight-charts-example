@@ -1,32 +1,33 @@
 {
-    "name": "lightweight-charts-example",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "sandbox": "parcel src/sandbox/index.html --out-dir ./dist/charts-button --open",
-        "charts-button": "parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
-        "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
-        "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open",
-        "series-markers": "parcel src/series-markers/index.html --out-dir ./dist/resize-observer --open",
-        "tickmark-format": "parcel src/tickmark-format/index.html --out-dir ./dist/tickmark-format --open"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SuperPenguin/lightweight-charts-example.git"
-    },
-    "author": "Andree Yosua",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/SuperPenguin/lightweight-charts-example/issues"
-    },
-    "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
-    "devDependencies": {
-        "parcel-bundler": "^1.12.4",
-        "typescript": "^4.1.2"
-    },
-    "dependencies": {
-        "lightweight-charts": "^3.2.0",
-        "modern-normalize": "^1.0.0"
-    }
+  "name": "lightweight-charts-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sandbox": "parcel src/sandbox/index.html --out-dir ./dist/charts-button --open",
+    "charts-button": "parcel src/charts-button/index.html --out-dir ./dist/charts-button --open",
+    "destroy-chart-memory": "parcel src/destroy-chart-memory/index.html --out-dir ./dist/destroy-chart-memory --open",
+    "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
+    "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open",
+    "series-markers": "parcel src/series-markers/index.html --out-dir ./dist/resize-observer --open",
+    "tickmark-format": "parcel src/tickmark-format/index.html --out-dir ./dist/tickmark-format --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperPenguin/lightweight-charts-example.git"
+  },
+  "author": "Andree Yosua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperPenguin/lightweight-charts-example/issues"
+  },
+  "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "lightweight-charts": "^3.3.0",
+    "modern-normalize": "^1.0.0"
+  }
 }

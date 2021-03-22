@@ -1,15 +1,15 @@
 body {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 div.info {
-    padding: 10px 20px;
-    border: 0px solid black;
-    border-bottom-width: 1px;
+  padding: 10px 20px;
+  border: 0px solid black;
+  border-bottom-width: 1px;
 }
 .lightweight-charts {
-    flex: auto;
-    min-width: 0px;
-    min-height: 0px;
+  flex: auto;
+  min-width: 0px;
+  min-height: 0px;
 }
