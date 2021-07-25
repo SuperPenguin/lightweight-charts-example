@@ -8,7 +8,8 @@
     "priceline-element": "parcel src/priceline-element/index.html --out-dir ./dist/priceline-element --open",
     "resize-observer": "parcel src/resize-observer/index.html --out-dir ./dist/resize-observer --open",
     "sandbox": "parcel src/sandbox/index.html --out-dir ./dist/sandbox --open",
-    "series-markers": "parcel src/series-markers/index.html --out-dir ./dist/resize-observer --open",
+    "series-markers": "parcel src/series-markers/index.html --out-dir ./dist/series-markers --open",
+    "sync-charts-timescale": "parcel src/sync-charts-timescale/index.html --out-dir ./dist/sync-charts-timescale --open",
     "series-visibility": "parcel src/series-visibility/index.html --out-dir ./dist/series-visibility --open"
   },
   "repository": {
@@ -23,10 +24,10 @@
   "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "typescript": "^4.2.3"
+    "typescript": "^4.3.2"
   },
   "dependencies": {
-    "lightweight-charts": "^3.3.0",
+    "lightweight-charts": "^3.4.0",
     "modern-normalize": "^1.0.0"
   }
 }
