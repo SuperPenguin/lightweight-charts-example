@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/SuperPenguin/lightweight-charts-example#readme",
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
-    "typescript": "^4.4.3"
+    "parcel": "^2.0.1",
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "lightweight-charts": "^3.6.1",
+    "lightweight-charts": "^3.7.0",
     "modern-normalize": "^1.1.0"
   }
 }
